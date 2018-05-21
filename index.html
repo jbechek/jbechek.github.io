@@ -1,244 +1,141 @@
+<!--
+	* Personal website of Jordan Bechek
+	* file: index.html
+-->
+
 <html>
 	<head>
 		<title>Jordan Bechek</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/w3.css">
 
+		<link rel="stylesheet" type="text/css" href="main.css">
 		<script src="js/jquery-1.11.3.min.js"></script>
-
-		<style>
-			a.w3-bar-item:hover { background-color: #EDEDED !important; }
-
-			#page { margin-top: 1%; }
-			#apps, #projects { padding-bottom: 0px !important; }
-			div.apps, div.projects { padding-left: 1%; }
-
-			.icon_image { width: 145px; float: left; }
-
-			.w3-row-padding { margin-bottom: 1%; }
-
-			td { border-left: 90px solid #FFF; font-size: .93em !important; }
-			tr>td:first-child { border: 0px; }
-
-			footer *{ font-size: .9em !important; }
-			table.footer-table td { border: 0px !important; }
-
-			#me_pic { float: right; margin-left: 11%; }
-
-			.project_desc p { margin-right: 38%; }
-
-			.closed * { opacity: 0; transition: all 0.85s ease; }
-
-			.collapse {
-				float: right;
-				padding-right: 5px;
-				padding-top: 30px;
-				font-size: 0.57em;
-				color: #999;
-				cursor: pointer;
-			}
-		</style>
 	</head>
 
 	<body>
-		<!-- NAV BAR -->
-		<div class="w3-top">
-  			<div class="w3-bar w3-white w3-wide w3-padding w3-card-2" id="option_bar">
-    			<a href="#top" class="w3-bar-item w3-button"><b>Jordan Bechek</b></a>
+		<div id="wrapper">
+			<div id="intro">
+				<div class="typed">
+					<div id="title">Jordan Bechek</div>
+				</div>
 
-		    	<!-- Float links to the right. Hide them on small screens -->
-		    	<div class="w3-right w3-hide-small">
-		      	<a href="#apps" class="w3-bar-item w3-button">Applications</a>
-		      	<a href="#projects" class="w3-bar-item w3-button">Projects</a>
-		      	<a href="#about" class="w3-bar-item w3-button">About</a>
-		      	<a href="#contact" class="w3-bar-item w3-button">Contact</a>
-		    	</div>
-		  	</div>
+				<div id="attributes">Programmer&nbsp;&nbsp;×&nbsp;&nbsp;Philosopher</div>
+			</div>
+			
+			<div id="applicationsTitleWrapper">
+				<div id="applicationsTitle" class="sectionTitle unselected">Applications(<div class="openInd">viewing</div>)</div>
+			</div>
+
+			<div id="projectsTitleWrapper">
+				<div id="projectsTitle" class="sectionTitle unselected">Projects(<div class="openInd">viewing</div>)</div>
+			</div>
+		
+			<div id="aboutTitleWrapper">
+				<div id="aboutTitle" class="sectionTitle unselected">About(<div class="openInd">viewing</div>)</div>
+			</div>
+			
+			<div id="moreTitleWrapper">
+				<div id="moreTitle" class="sectionTitle unselected">More(<div class="openInd">viewing</div>)</div>
+			</div>
+
+			<!--<div id="test"></div>-->
+
+			<div id="content">
+				<div id="appsDiv" align="center">
+					<!--  https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8  -->
+					<div id="studentsEdge" class="appLeft app applicationsContent">
+						<div class="overlayWrapper">
+							<img src="img/students_edge_icon.png">
+							<div class="overlayTextWrapper overlayTop">
+								<div class="overlayText overlayiOS">iOS</div>
+							</div>
+							<div class="overlayTextWrapper overlayBottom">
+								<div class="overlayText overlayAndroid">Android</div>
+							</div>
+						</div>
+
+						<div class="appTitle">Student's Edge</div>
+					</div>
+
+					<!--  https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8  -->
+					<div id="mySunnyDay" class="app applicationsContent">
+						<div class="overlayWrapper">
+							<img src="img/my_sunny_day_icon.png">
+							<div class="overlayTextWrapper overlayCenter">
+								<div class="overlayText overlayiOS">iOS</div>
+							</div>
+						</div>
+
+						<div class="appTitle">My Sunny Day</div>
+					</div>
+				</div>
+
+				<div id="projDiv" align="center">
+					<div id="eyeTrackingProj" class="proj projLeft projContent">
+						<div class="folderWrapper">
+							<a href="https://imgur.com/a/VPk6nBb" target="_blank"><img src="img/folder.png"></a>
+						</div>
+
+						<div class="projTitle"><a href="https://imgur.com/a/VPk6nBb" target="_blank">Eye Tracking Chess Players</a></div>
+					</div>
+
+					<div id="realtimeTracker" class="proj projContent">
+						<div class="folderWrapper">
+							<a href="https://ft-testing.github.io" target="_blank"><img src="img/folder.png"></a>
+						</div>
+
+						<div class="projTitle"><a href="https://ft-testing.github.io" target="_blank">Real-Time Bus Tracker</a></div>
+					</div>
+
+					<div id="databaseProj" class="proj projContent">
+						<div class="folderWrapper">
+							<a href="https://github.com/jbechek/CIS-351_Final_Project" target="_blank"><img src="img/folder.png"></a>
+						</div>
+
+						<div class="projTitle"><a href="https://github.com/jbechek/CIS-351_Final_Project" target="_blank">Data Storage Solution</a></div>
+					</div>
+				</div>
+
+				<div id="aboutSection">
+					<div class="aboutContent">
+						<p><span class="enterChar">></span> I have a Bachelor's Degree in Computing and Information Studies from</p>
+						<p><span class="enterChar">></span> <a href="http://www.washjeff.edu" target="_blank">Washington &amp; Jefferson College</a>, with minors in Neuroscience and Philosophy.</p>
+						<p><span class="enterChar">></span> Although I have a strong interest in programming and solving problems</p>
+						<p><span class="enterChar">></span> through computers, I am also fascinated by how the human mind works, both</p>
+						<p><span class="enterChar">></span> physiologically and on a more abstract level. I have been programming</p>
+						<p><span class="enterChar">></span> for six years and would consider myself proficient in Java, Javascript</p>
+						<p><span class="enterChar">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.</p>
+						<p><span class="enterChar">></span></p>
+						<p><span class="enterChar">></span> I have recently concluded my internship at <a href="https://www.aires.com/" target="_blank">Aires</a> for the summer, but I work</p>
+						<p><span class="enterChar">></span> on programming projects in my spare time as well. You can contact me using</p>
+						<p><span class="enterChar">></span> the email bechek.jordan@gmail.com.</p>
+					
+					</div>
+				</div>
+
+				<div id="moreDiv" align="center">
+					<h4>Skill Set</h4>
+
+					<div id="skills" class="iconSet">
+						<img src="img/java_icon.png">
+						<img src="img/html_icon.png">
+						<img src="img/css_icon.png">
+						<img src="img/js_icon.png">
+						<img src="img/sql_icon.png">
+						<img src="img/xml_icon.png">
+						<img src="img/json_icon.png">
+						<img src="img/inc_icon.png">
+						<img src="img/ini_icon.png">
+					</div>
+				</div>
+			</div>
+
+			<div id="legal">
+				<div id="copyright">/* © 2018 Jordan Bechek, All Rights Reserved */</div>
+			</div>
 		</div>
 
-
-		<!-- PAGE -->
-		<div class="w3-content w3-padding" style="max-width:1564px" id="page">
-
-	  		<!-- APPLICATIONS -->
-			<div class="w3-container w3-padding-32" id="apps">
-			   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Applications<div class="collapse">hide</div></h3>
-			</div>
-
-			<div id="apps_folder">
-				<div class="w3-row-padding">
-					<h5 style="padding-left: 7px">Student's Edge</h5>
-				   	<img src="img/students_edge_icon.png" alt="Student's Edge" class="icon_image">
-
-				    <div class="w3-col m6 w3-margin-bottom" style="padding-left: 2%">
-				   	
-				    	<p>Quickly determine how you need to score on any upcoming assignment to get an A, keep track of your grades and GPA, and much much more. Download and have your grades, your way. </p>
-
-				      <a href="https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8"><button class="w3-button w3-light-grey" style="width: 100px">iOS</button></a>
-						<a href="https://play.google.com/store/apps/details?id=io.cordova.studentsedge"><button class="w3-button w3-light-grey" style="width: 100px">Android</button></a>
-
-				   	</div>
-				</div>
-
-				<div class="w3-row-padding">
-					<h5 style="padding-left: 7px">My Sunny Day</h5>
-				   	<img src="img/my_sunny_day_icon.png" alt="My Sunny Day" class="icon_image">
-
-				    <div class="w3-col m6 w3-margin-bottom" style="padding-left: 2%">
-				   	
-				    	<p>This app was created for all those times when the sun doesn’t shine, and you really wish it would. Whether this is due to inclement weather, season, or locale, you can download and get Sunshine at your Fingertips™!</p>
-
-				      <a href="https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8"><button class="w3-button w3-light-grey" style="width: 100px">iOS</button></a>
-				   	</div>
-				</div>
-			</div>
-
-
-			<!-- PROJECTS -->
-			<div class="w3-container w3-padding-32" id="projects">
-			   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects<div class="collapse">hide</div></h3>
-			</div>
-
-			<div id="projects_folder">
-				<div class="w3-row-padding">
-					<h5 style="padding-left: 7px">Data Storage System</h5>
-
-				    <div class="w3-col w3-margin-bottom project_desc">
-				   	
-				    	<p>My final project for Advanced Database Concepts involved the design, creation, and implementation of a temporary and permanent data storage system. This required the combined use of a database (transactional) and data warehouse (informational). </p>
-
-				      <a href="http://www.mediafire.com/folder/8364svf2zxabe/Advanced_Databases"><button class="w3-button w3-light-grey" style="width: 100px">See More</button></a>
-
-				   	</div>
-				</div>
-
-
-				<div class="w3-row-padding">
-					<h5 style="padding-left: 7px">Data Mining Technique Analysis</h5>
-
-				    <div class="w3-col w3-margin-bottom project_desc">
-				   	
-				    	<p>Data Mining projects involved the use of relatively large data sets to solve problems, such as describing categories of data or making predictions using sets of training data. The following is an example of said projects, performed on a data set about abalones, a type of sea mollusk. </p>
-
-				      <a href="data_mining_homework.html"><button class="w3-button w3-light-grey" style="width: 100px">See More</button></a>
-
-				   	</div>
-				</div>
-
-
-				<div class="w3-row-padding">
-					<h5 style="padding-left: 7px">Eye Tracking Chess Players</h5>
-
-				    <div class="w3-col project_desc">
-				   	
-				    	<p>My final project for Eye Tracking Methodology involved designing and carrying out an experiment to compare the eye-movement patterns of novice and expert chess players. With the help of a Tobii X60 eye tracker, we found that, in general, expert players spend more time attenuating to spatial relationships between pieces, whereas novice players spend more time looking at the pieces themselves. </p>
-
-				    	<!-- Upload somewhere or make in-site preview
-				      	<a href=""><button class="w3-button w3-light-grey w3-disabled" style="width: 100px">See More</button></a>-->
-
-				   	</div>
-				</div>
-			</div>
-
-
-			<!-- ABOUT -->
-			<div class="w3-container w3-padding-32" id="about">
-			   	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-			   	<div style="width: 97%">
-			   		<h5>General Info</h5>
-
-		    		<p><img src="img/me.jpg" width="275px" height="275px" id="me_pic">I am a Computing and Information Studies major at Washington and Jefferson College, with minors in Neuroscience and Philosophy. Although I have a strong interest in programming and solving problems through computers, I am also fascinated by how the human mind works, both physiologically and on a more abstract level. I have been programming for six years and would consider myself proficient in Java, Javascript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.</p>
-
-		    		<p>I have recently concluded my internship at <a href="https://www.aires.com/">Aires</a> for the summer, but I work on programming projects in my spare time as well. You can <a href="#contact">contact</a> me using either email below. </p>
-
-		    		<br>
-
-		    		<h5>Some Coursework Highlights</h5>
-		    		<table border="0" id="class_table">
-		    			<tr>
-		    				<td>App Design and Development</td><td>Eye Tracking Methodology</td><td>Computer-Voice Interfaces</td>
-		    			</tr>
-		    			<tr>
-		    				<td>Data Structures</td><td>Advanced Topics in Neuroscience</td><td>Bioethics</td>
-		    			</tr>
-		    			<tr>
-		    				<td>Human Computer Interaction</td><td>Experimental Neuroscience</td><td>Aesthetics</td>
-		    			</tr>
-		    			<tr>
-		    				<td>Advanced Database Concepts</td>
-		    			</tr>
-		    			<tr>
-		    				<td>Data Mining</td>
-		    			</tr>
-		    		</table>
-
-		    		<br>
-			   	</div>
-		   	</div>
-		</div>
-
-
-		<script type="text/javascript">
-			$(document).ready(function() {
-			   	const $pic = $("#me_pic");
-			   	const $menu = $("div.w3-hide-small");
-			   	const $table = $("#class_table");
-
-			   	function checkWidth() {
-			      	let windowsize = $(window).width();
-
-			      	if (windowsize < 750) {
-			         	$pic.css("display", "none");
-			         	$menu.css("display", "none");
-
-			         	$table.html("<tr><td>App Design and Development</td></tr><tr><td>Data Structures</td></tr><tr><td>Advanced Database Concepts</td></tr><tr><td>Data Mining</td></tr><tr><td>-</td></tr><tr><td>Eye Tracking Methodology</td></tr><tr><td>Advanced Topics in Neuroscience</td></tr><tr><td>Experimental Neuroscience</td></tr><tr><td>-</td></tr><tr><td>Computer-Voice Interfaces</td></tr><tr><td>Human Computer Interaction</td></tr><tr><td>Bioethics</td></tr><tr><td>Aesthetics</td></tr>");
-			      	} else {
-			      		$pic.css("display", "block");
-			      		$menu.css("display", "block");
-
-			      		$table.html("<tr><td>App Design and Development</td><td>Eye Tracking Methodology</td><td>Computer-Voice Interfaces</td></tr><tr><td>Data Structures</td><td>Advanced Topics in Neuroscience</td><td>Bioethics</td></tr><tr><td>Human Computer Interaction</td><td>Experimental Neuroscience</td><td>Aesthetics</td></tr><tr><td>Advanced Database Concepts</td></tr><tr><td>Data Mining</td></tr>");
-			      	}
-			   	}
-			   
-			   	checkWidth();
-			   	$(window).resize(checkWidth);
-			});
-
-			$(".collapse").on("click", function(e) {
-			  	e.preventDefault();
-
-			  	let selector = "#" + $(this).parent().closest("div").attr("id") + "_folder";
-
-			  	if($(this).html() === "hide") {
-			  		$(selector).toggleClass("closed").slideUp();
-			  		$(this).html("show");
-			  	} else {
-			  		$(selector).toggleClass("closed").slideDown();
-			  		$(this).html("hide");
-			  	}
-			});
-    	</script> 
+		<script src="js/main.js" type="text/javascript"></script>
 	</body>
-
-	<footer class="w3-padding-16 w3-border-top w3-border-light-grey" id="contact">
-  		<div style="padding-left: 2.5%">
-			<table border="0" style="padding-bottom: 1%" class="footer-table">
-				<tr>
-					<td>Website Developer:</td>
-					<td>Jordan Bechek</td>
-				</tr>
-				<tr>
-					<td>School Email:</td>
-					<td>bechekje@jay.washjeff.edu</td>
-				</tr>
-				<tr>
-					<td>Another Email:</td>
-					<td>bechek.jordan@gmail.com</td>
-				</tr>
-			</table>
-
-			<a href="#top"><button class="w3-button w3-light-grey">Back to top</button></a>
-		</div>
-	</footer>
 </html>
