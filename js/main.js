@@ -221,7 +221,7 @@ $(".sectionTitle").on("click", function() {
                         "through computers, I am also fascinated by how the human mind works, both</p><p><span class=\""+
                         "enterChar\">></span> physiologically and on a more abstract level. I have been programming</p><p>"+
                         "<span class=\"enterChar\">></span> for six years and would consider myself proficient in Java, "+
-                        "Javascript</p><p><span class=\"enterChar\">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML, "+
+                        "JavaScript</p><p><span class=\"enterChar\">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML, "+
                         "JSON, and SQL.</p><p><span class=\"enterChar\">></span></p><p><span class=\"enterChar\">></span> I "+
                         "have recently concluded my internship at <a href=\"https://www.aires.com/\" target=\"_blank\">Aires"+
                         "</a> for the summer, but I work</p><p><span class=\"enterChar\">></span> on programming projects in "+
@@ -363,7 +363,7 @@ $(".sectionTitle").on("click", function() {
                     "in Neuroscience and Philosophy. Although I have a strong interest in programming and solving problems "+
                     "through computers, I am also fascinated by how the human mind works, both physiologically and on a more "+
                     "abstract level. I have been programming for six years and would consider myself proficient in Java, "+
-                    "Javascript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.<br><br>I have recently "+
+                    "JavaScript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.<br><br>I have recently "+
                     "concluded my internship at <a href=\"https://www.aires.com/\" target=\"_blank\">Aires</a> for the "+
                     "summer, but I work on programming projects in my spare time as well. You can contact me using the "+
                     "email bechek.jordan@gmail.com.</p>");
@@ -420,15 +420,18 @@ $(".folderWrapper").hover(function() {
 
 $("#studentsEdge").on("click", function() {
     if(deviceType === 1) {
-        window.open("https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8","_blank");
+        //window.open("https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8","_blank");
+        window.location = "https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8";
     } else if(deviceType === 2) {
-        window.open("https://play.google.com/store/apps/details?id=io.cordova.studentsedge","_blank");
+        //window.open("https://play.google.com/store/apps/details?id=io.cordova.studentsedge","_blank");
+        window.location = "https://play.google.com/store/apps/details?id=io.cordova.studentsedge";
     }
 });
 
 $("#mySunnyDay").on("click", function() {
     if(deviceType > 0) {
-        window.open("https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8", "_blank");
+        //window.open("https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8", "_blank");
+        window.location = "https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8";
     }
 });
 
