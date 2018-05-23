@@ -287,7 +287,7 @@ $(".sectionTitle").on("click", function() {
             } else {
 
                 if(usingSafari) {
-                    $("#applicationsTitleWrapper").css("width", "204");
+                    $("#applicationsTitleWrapper").css("width", "206");
                 } else {
                     $("#applicationsTitleWrapper").css("width", "202");
                 }
@@ -330,7 +330,7 @@ $(".sectionTitle").on("click", function() {
                     }, 300, function() {
                         
                         if(usingSafari) {
-                            $("#projectsTitleWrapper").css("width", "161");
+                            $("#projectsTitleWrapper").css("width", "163");
                         } else {
                             $("#projectsTitleWrapper").css("width", "159");
                         }
@@ -368,7 +368,7 @@ $(".sectionTitle").on("click", function() {
                     }, 300, function() {
                         
                         if(usingSafari) {
-                            $("#aboutTitleWrapper").css("width", "129");
+                            $("#aboutTitleWrapper").css("width", "131");
                         } else {
                             $("#aboutTitleWrapper").css("width", "127");
                         }
@@ -410,7 +410,7 @@ $(".sectionTitle").on("click", function() {
                     }, 300, function() {
                         
                         if(usingSafari) {
-                            $("#moreTitleWrapper").css("width", "118");
+                            $("#moreTitleWrapper").css("width", "120");
                         } else {
                             $("#moreTitleWrapper").css("width", "116");
                         }
