@@ -27,7 +27,7 @@ if (navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i) 
     $(".app").css("letter-spacing", "-0.05em");
 
     usingSafari = true;
-    //$("#test").text("SAFARI");
+    $("#test").text("SAFARI");
 }
 
 var deviceType = 0;
@@ -420,17 +420,14 @@ $(".folderWrapper").hover(function() {
 
 $("#studentsEdge").on("click", function() {
     if(deviceType === 1) {
-        //window.open("https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8","_blank");
         window.location = "https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8";
     } else if(deviceType === 2) {
-        //window.open("https://play.google.com/store/apps/details?id=io.cordova.studentsedge","_blank");
         window.location = "https://play.google.com/store/apps/details?id=io.cordova.studentsedge";
     }
 });
 
 $("#mySunnyDay").on("click", function() {
     if(deviceType > 0) {
-        //window.open("https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8", "_blank");
         window.location = "https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8";
     }
 });
