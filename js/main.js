@@ -27,7 +27,7 @@ if (navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i) 
     $(".app").css("letter-spacing", "-0.05em");
 
     usingSafari = true;
-    $("#test").text("SAFARI");
+    //$("#test").text("SAFARI");
 }
 
 var deviceType = 0;
@@ -285,7 +285,13 @@ $(".sectionTitle").on("click", function() {
                         $("#applicationsTitle div.openInd").css("display", "inline-block");
                 });
             } else {
-                $("#applicationsTitleWrapper").css("width", "202");
+
+                if(usingSafari) {
+                    $("#applicationsTitleWrapper").css("width", "204");
+                } else {
+                    $("#applicationsTitleWrapper").css("width", "202");
+                }
+                
                 $("#applicationsTitle div.openInd").css("display", "inline-block");
             }
 
@@ -322,7 +328,13 @@ $(".sectionTitle").on("click", function() {
                 $(this).parent().animate({
                     top: $("#intro").height()*1.5
                     }, 300, function() {
-                        $("#projectsTitleWrapper").css("width", "159");
+                        
+                        if(usingSafari) {
+                            $("#projectsTitleWrapper").css("width", "161");
+                        } else {
+                            $("#projectsTitleWrapper").css("width", "159");
+                        }
+
                         $("#projectsTitle div.openInd").css("display", "inline-block");
                 });
             }
@@ -354,7 +366,13 @@ $(".sectionTitle").on("click", function() {
                 $(this).parent().animate({
                     top: $("#intro").height()*1.5
                     }, 300, function() {
-                        $("#aboutTitleWrapper").css("width", "127");
+                        
+                        if(usingSafari) {
+                            $("#aboutTitleWrapper").css("width", "129");
+                        } else {
+                            $("#aboutTitleWrapper").css("width", "127");
+                        }
+
                         $("#aboutTitle div.openInd").css("display", "inline-block");
                 });
 
@@ -390,7 +408,13 @@ $(".sectionTitle").on("click", function() {
                 $(this).parent().animate({
                     top: $("#intro").height()*1.5
                     }, 300, function() {
-                        $("#moreTitleWrapper").css("width", "116");
+                        
+                        if(usingSafari) {
+                            $("#moreTitleWrapper").css("width", "118");
+                        } else {
+                            $("#moreTitleWrapper").css("width", "116");
+                        }
+
                         $("#moreTitle div.openInd").css("display", "inline-block");
                 });
             }
