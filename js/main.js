@@ -5,7 +5,7 @@
 
 setTimeout(function() {
     $(".typed *").css("border-right", ".1em solid rgba(26, 180, 35, 0.3)");
-}, 140);
+}, 110);
 
 var usingSafari = false;
 
@@ -38,6 +38,8 @@ if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     deviceType = 2;
 }
 
+var minWidth = 785;
+
 function whichAnimationEvent() {
     let t, el = document.createElement("fakeelement");
 
@@ -62,7 +64,7 @@ $(".typed *").one(animationEvent, function(event) {
 
     $("#attributes").fadeIn(1300);
 
-    if($(window).width() <= 770) {
+    if(window.innerWidth <= minWidth) {
         adjustMobileTitles();
 
         setTimeout(function() {
@@ -113,7 +115,7 @@ function resetTitles() {
 }
 
 var sectionOpened = false;
-var lastWidth = $(window).width();
+var lastWidth = window.innerWidth;
 
 $(".sectionTitle").on("click", function() {
     let clickedEl = $(this).attr("id");
@@ -132,7 +134,7 @@ $(".sectionTitle").on("click", function() {
         if(clickedEl === $(".sectionTitle:eq(0)").attr("id")) {
             $("#applicationsTitle div.openInd").fadeOut(150);
 
-            if($(window).width() > 770) {
+            if(window.innerWidth > minWidth) {
                 setTimeout(function() {
                     $("#applicationsTitleWrapper").css("width", "247");
                 }, 200);
@@ -156,7 +158,7 @@ $(".sectionTitle").on("click", function() {
         } else if(clickedEl === $(".sectionTitle:eq(1)").attr("id")) {
             $("#projectsTitle div.openInd").fadeOut(150);
 
-            if($(window).width() > 770) {
+            if(window.innerWidth > minWidth) {
                 setTimeout(function() {
                     $("#projectsTitleWrapper").css("width", "175");
                 }, 200);
@@ -183,7 +185,7 @@ $(".sectionTitle").on("click", function() {
         } else if(clickedEl === $(".sectionTitle:eq(2)").attr("id")) {
             $("#aboutTitle div.openInd").fadeOut(150);
 
-            if($(window).width() > 770) {
+            if(window.innerWidth > minWidth) {
                 setTimeout(function() {
                     $("#aboutTitleWrapper").css("width", "121");
                 }, 200);
@@ -221,7 +223,7 @@ $(".sectionTitle").on("click", function() {
                         "through computers, I am also fascinated by how the human mind works, both</p><p><span class=\""+
                         "enterChar\">></span> physiologically and on a more abstract level. I have been programming</p><p>"+
                         "<span class=\"enterChar\">></span> for six years and would consider myself proficient in Java, "+
-                        "Javascript</p><p><span class=\"enterChar\">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML, "+
+                        "JavaScript</p><p><span class=\"enterChar\">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML, "+
                         "JSON, and SQL.</p><p><span class=\"enterChar\">></span></p><p><span class=\"enterChar\">></span> I "+
                         "have recently concluded my internship at <a href=\"https://www.aires.com/\" target=\"_blank\">Aires"+
                         "</a> for the summer, but I work</p><p><span class=\"enterChar\">></span> on programming projects in "+
@@ -234,7 +236,7 @@ $(".sectionTitle").on("click", function() {
 
             $("#moreDiv").fadeOut(200);
 
-            if($(window).width() > 770) {
+            if(window.innerWidth > minWidth) {
                 setTimeout(function() {
                     $("#moreTitleWrapper").css("width", "104");
                 }, 200);
@@ -274,10 +276,10 @@ $(".sectionTitle").on("click", function() {
 
         $("#"+clickedEl).removeClass("unselected");
 
-        let distance = $(window).width()/2 - ($(this).parent().width()+91)/2;
+        let distance = (window.innerWidth)/2 - ($(this).parent().width()+91)/2;
 
         if(clickedEl === $(".sectionTitle:eq(0)").attr("id")) {
-            if($(window).width() > 770) {
+            if(window.innerWidth > minWidth) {
                 $(this).parent().animate({
                     left: distance
                     }, 300, function() {
@@ -285,7 +287,13 @@ $(".sectionTitle").on("click", function() {
                         $("#applicationsTitle div.openInd").css("display", "inline-block");
                 });
             } else {
-                $("#applicationsTitleWrapper").css("width", "202");
+
+                if(usingSafari) {
+                    $("#applicationsTitleWrapper").css("width", "206");
+                } else {
+                    $("#applicationsTitleWrapper").css("width", "202");
+                }
+                
                 $("#applicationsTitle div.openInd").css("display", "inline-block");
             }
 
@@ -305,13 +313,13 @@ $(".sectionTitle").on("click", function() {
         } else if(clickedEl === $(".sectionTitle:eq(1)").attr("id")) {
             //$("#content").css("height", "800px");
 
-            if($(window).width() <= 493 && $(window).width() > 325) {
+            if(window.innerWidth <= 493 && window.innerWidth > 325) {
                 $("#databaseProj").css("margin-bottom", "50px").css("margin-top", "-20px");
-            } else if($(window).width() <= 325) {
+            } else if(window.innerWidth <= 325) {
                 $("#databaseProj").css("margin-bottom", "50px").css("margin-top", "7%");
             }
 
-            if($(window).width() > 770) {
+            if(window.innerWidth > minWidth) {
                 $(this).parent().animate({
                     right: distance
                     }, 300, function() {
@@ -322,7 +330,13 @@ $(".sectionTitle").on("click", function() {
                 $(this).parent().animate({
                     top: $("#intro").height()*1.5
                     }, 300, function() {
-                        $("#projectsTitleWrapper").css("width", "159");
+                        
+                        if(usingSafari) {
+                            $("#projectsTitleWrapper").css("width", "163");
+                        } else {
+                            $("#projectsTitleWrapper").css("width", "159");
+                        }
+
                         $("#projectsTitle div.openInd").css("display", "inline-block");
                 });
             }
@@ -342,7 +356,7 @@ $(".sectionTitle").on("click", function() {
 
             //$(".proj").fadeIn(300).css("display", "inline-block");
         } else if(clickedEl === $(".sectionTitle:eq(2)").attr("id")) {
-            if($(window).width() > 770) {
+            if(window.innerWidth > minWidth) {
                 $(this).parent().animate({
                     left: distance,
                     marginTop: "-=100"
@@ -354,7 +368,13 @@ $(".sectionTitle").on("click", function() {
                 $(this).parent().animate({
                     top: $("#intro").height()*1.5
                     }, 300, function() {
-                        $("#aboutTitleWrapper").css("width", "127");
+                        
+                        if(usingSafari) {
+                            $("#aboutTitleWrapper").css("width", "131");
+                        } else {
+                            $("#aboutTitleWrapper").css("width", "127");
+                        }
+
                         $("#aboutTitle div.openInd").css("display", "inline-block");
                 });
 
@@ -363,7 +383,7 @@ $(".sectionTitle").on("click", function() {
                     "in Neuroscience and Philosophy. Although I have a strong interest in programming and solving problems "+
                     "through computers, I am also fascinated by how the human mind works, both physiologically and on a more "+
                     "abstract level. I have been programming for six years and would consider myself proficient in Java, "+
-                    "Javascript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.<br><br>I have recently "+
+                    "JavaScript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.<br><br>I have recently "+
                     "concluded my internship at <a href=\"https://www.aires.com/\" target=\"_blank\">Aires</a> for the "+
                     "summer, but I work on programming projects in my spare time as well. You can contact me using the "+
                     "email bechek.jordan@gmail.com.</p>");
@@ -378,7 +398,7 @@ $(".sectionTitle").on("click", function() {
             $("#content").css("height", "auto");
             $("#moreDiv").fadeIn(300);
 
-            if($(window).width() > 770) {
+            if(window.innerWidth > minWidth) {
                 $(this).parent().animate({
                     right: distance,
                     marginTop: "-=100"
@@ -390,7 +410,13 @@ $(".sectionTitle").on("click", function() {
                 $(this).parent().animate({
                     top: $("#intro").height()*1.5
                     }, 300, function() {
-                        $("#moreTitleWrapper").css("width", "116");
+                        
+                        if(usingSafari) {
+                            $("#moreTitleWrapper").css("width", "120");
+                        } else {
+                            $("#moreTitleWrapper").css("width", "116");
+                        }
+
                         $("#moreTitle div.openInd").css("display", "inline-block");
                 });
             }
@@ -398,7 +424,7 @@ $(".sectionTitle").on("click", function() {
     }
 });
 
-if($(window).width() <= 770 && deviceType > 0) {
+if(window.innerWidth <= minWidth && deviceType > 0) {
     $(".overlayTextWrapper").css("display", "none");
 }
 
@@ -420,15 +446,15 @@ $(".folderWrapper").hover(function() {
 
 $("#studentsEdge").on("click", function() {
     if(deviceType === 1) {
-        window.open("https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8","_blank");
+        window.location = "https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8";
     } else if(deviceType === 2) {
-        window.open("https://play.google.com/store/apps/details?id=io.cordova.studentsedge","_blank");
+        window.location = "https://play.google.com/store/apps/details?id=io.cordova.studentsedge";
     }
 });
 
 $("#mySunnyDay").on("click", function() {
     if(deviceType > 0) {
-        window.open("https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8", "_blank");
+        window.location = "https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8";
     }
 });
 
@@ -474,11 +500,11 @@ $(".proj img").on("mouseleave", function() {
 $(window).on("resize", function() {
     let el = $("div.sectionTitle:not(.unselected)").attr("id");
 
-    if($(this).width() > 770) {
+    if(window.innerWidth > minWidth) {
         if(!sectionOpened) {
             resetTitles();
         } else {
-            if(lastWidth <= 770) {
+            if(lastWidth <= minWidth) {
                 $("div.sectionTitle:not(.unselected)").trigger("click");
             }
         }
@@ -486,7 +512,7 @@ $(window).on("resize", function() {
         $("#content").css("margin", "auto");
 
         //$("#test").append("X");
-        let x = $(this).width()/2 - ($("#"+el).parent().width()+91)/2 + 45;
+        let x = ($(this).width())/2 - ($("#"+el).parent().width()+91)/2 + 45;
 
         if(el === $(".sectionTitle:eq(3)").attr("id") || el === $(".sectionTitle:eq(1)").attr("id")) {
             $("div.sectionTitle:not(.unselected)").parent().css("right", x);
@@ -498,7 +524,7 @@ $(window).on("resize", function() {
         if(!sectionOpened) {
             adjustMobileTitles();
         } else {
-            if(lastWidth >= 771) {
+            if(lastWidth >= minWidth+1) {
                 $("div.sectionTitle:not(.unselected)").trigger("click");
             }
         }
@@ -516,5 +542,84 @@ $(window).on("resize", function() {
         }
     }
 
-    lastWidth = $(this).width();
+    lastWidth = window.innerWidth;
+});
+
+$("#moreDiv img").on("mouseover", function() {
+    $(this).fadeOut(150, function() {
+        let pic = $(this).attr("src");
+        pic = pic.substring(0, pic.lastIndexOf("_"));
+      
+        $(this).attr("src", pic + "_green.png").fadeIn(300);
+    });
+
+    if($(this).parents("#interests").length > 0) {
+        let title = $(this).attr("src");
+        title = title.substring(title.indexOf("/") + 1, title.indexOf("_"));
+        title = title.replace(/-/g, " ");
+
+        let elIndex = $(this).index();
+
+        $("#moreDiv h3:eq(0)").fadeOut(150, function() {
+            $(this).html(title).css("color", "rgba(26, 180, 35, 1)");
+
+            if(window.innerWidth > minWidth) {
+                if(elIndex < 3) {
+                    $(this).css("margin-left", (3-elIndex)*-220);
+                } else if(elIndex > 3) {
+                    $(this).css("margin-left", (elIndex-3)*220);
+                }
+            }
+            
+            $(this).fadeIn(300);
+        });
+    } else if($(this).parents("#skills").length > 0) {
+        let title = $(this).attr("src");
+        let elIndex = $(this).index();
+
+        $("#moreDiv h3:eq(1)").fadeOut(150, function() {
+            if(window.innerWidth > minWidth) {
+                if(elIndex < 3) {
+                    $(this).css("margin-left", (3-elIndex)*-220);
+                } else if(elIndex > 3 && elIndex < 7) {
+                    $(this).css("margin-left", (elIndex-3)*220);
+                } else if(elIndex >= 7) {
+                    $(this).css("margin-left", (10-elIndex)*-220);
+                }
+            }
+
+            if(elIndex === 0) {
+                $(this).html("Software");
+            } else if((elIndex > 0 && elIndex < 4) || elIndex === 5) {
+                $(this).html("Web");
+            } else if(elIndex === 4) {
+                $(this).html("Database");
+            } else if(elIndex === 6) {
+                $(this).html("Data");
+            } else {
+                $(this).html("Windows");
+            }
+
+            $(this).css("color", "rgba(26, 180, 35, 1)").fadeIn(300);
+        });
+    }
+});
+
+$("#moreDiv img").on("mouseleave", function() {
+    $(this).fadeOut(150, function() {
+        let pic = $(this).attr("src");
+        pic = pic.substring(0, pic.lastIndexOf("_"));
+      
+        $(this).attr("src", pic + "_white.png").fadeIn(300);
+    });
+
+    if($(this).parents("#interests").length > 0) {
+        $("#moreDiv h3:eq(0)").fadeOut(150, function() {
+            $(this).html("Interests").css("color", "#e6e6e6").css("margin-left", "auto").fadeIn(300);
+        });
+    } else if($(this).parents("#skills").length > 0) {
+        $("#moreDiv h3:eq(1)").fadeOut(150, function() {
+            $(this).html("Skill Set").css("color", "#e6e6e6").css("margin-left", "auto").fadeIn(300);
+        });
+    }
 });

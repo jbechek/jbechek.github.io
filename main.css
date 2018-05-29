@@ -346,9 +346,27 @@ a {
 }
 
 
-#moreDiv img {
+#skills img {
 	width: 110px;
 	height: 110px;
+}
+
+#interests img {
+	width: 84px;
+	height: 84px;
+	padding: 13px;
+}
+
+#interests img.smallImg {
+	width: 74px;
+	height: 74px;
+	padding: 18px;
+}
+
+#interests img.largeImg {
+	width: 90px;
+	height: 90px;
+	padding: 10px;
 }
 
 .iconSet {
@@ -359,7 +377,11 @@ a {
 	align-items: flex-start;
 }
 
-@media only screen and (max-width: 770px) and (min-width: 10px) {
+@media only screen and (max-width: 785px) and (min-width: 10px) {
+	.iconSet img {
+		margin: auto;
+	}
+
 	#content {
 		width: 95%;
 		height: auto;
@@ -471,8 +493,9 @@ a {
 		padding-bottom: 6px;
 	}
 
-	#moreDiv h4 {
+	#moreDiv h3 {
 		margin-top: 50px;
+		font-size: 95%;
 	}
 }
 
