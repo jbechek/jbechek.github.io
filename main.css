@@ -346,9 +346,27 @@ a {
 }
 
 
-#skills img {
+#languages img {
 	width: 110px;
 	height: 110px;
+}
+
+#software img {
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+}
+
+#software img.smallImg {
+	width: 82px;
+	height: 82px;
+	padding: 14px;
+}
+
+#software img.xSmallImg {
+	width: 72px;
+	height: 72px;
+	padding: 19px;
 }
 
 #interests img {
@@ -499,9 +517,13 @@ a {
 	}
 }
 
-@media only screen and (max-width: 500px) and (min-width: 10px) {
+@media only screen and (max-width: 494px) and (min-width: 10px) {
 	.sectionTitle.unselected:hover {
 		border-bottom: 0px;
 		padding-bottom: 0px;
+	}
+
+	#databaseProj {
+		margin-bottom: 100px;
 	}
 }

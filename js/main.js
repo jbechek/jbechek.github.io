@@ -130,6 +130,7 @@ $(".sectionTitle").on("click", function() {
         });
 
         $("html, body").animate({ scrollTop: 0 }, 150);
+        $("#title").css("cursor", "default");
 
         if(clickedEl === $(".sectionTitle:eq(0)").attr("id")) {
             $("#applicationsTitle div.openInd").fadeOut(150);
@@ -223,12 +224,12 @@ $(".sectionTitle").on("click", function() {
                         "through computers, I am also fascinated by how the human mind works, both</p><p><span class=\""+
                         "enterChar\">></span> physiologically and on a more abstract level. I have been programming</p><p>"+
                         "<span class=\"enterChar\">></span> for six years and would consider myself proficient in Java, "+
-                        "JavaScript</p><p><span class=\"enterChar\">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML, "+
-                        "JSON, and SQL.</p><p><span class=\"enterChar\">></span></p><p><span class=\"enterChar\">></span> I "+
-                        "have recently concluded my internship at <a href=\"https://www.aires.com/\" target=\"_blank\">Aires"+
-                        "</a> for the summer, but I work</p><p><span class=\"enterChar\">></span> on programming projects in "+
-                        "my spare time as well. You can contact me using</p><p><span class=\"enterChar\">></span> the email "+
-                        "bechek.jordan@gmail.com.</p>");
+                        "JavaScript</p><p><span class=\"enterChar\">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML,"+
+                        " JSON, and SQL.</p><p><span class=\"enterChar\">></span></p><p>"+
+                        "<p><span class=\"enterChar\">></span> I am, always have been, and always will be a problem "+
+                        "solver and tinkerer,</p><p><span class=\"enterChar\">></span> inquisitive in nature and "+
+                        "imaginative at heart. You can contact me using the</p><p><span class=\"enterChar\">></span>"+
+                        " email bechek.jordan@gmail.com.</p>");
             }, 200);
 
         } else if(clickedEl === $(".sectionTitle:eq(3)").attr("id")) {
@@ -275,6 +276,7 @@ $(".sectionTitle").on("click", function() {
         });
 
         $("#"+clickedEl).removeClass("unselected");
+        $("#title").css("cursor", "pointer");
 
         let distance = (window.innerWidth)/2 - ($(this).parent().width()+91)/2;
 
@@ -379,14 +381,13 @@ $(".sectionTitle").on("click", function() {
                 });
 
                 $(".aboutContent").html("<p>I have a Bachelor's Degree in Computing and Information Studies from <a "+
-                    "href=\"http://www.washjeff.edu\" target=\"_blank\">Washington &amp; Jefferson College</a>, with minors "+
-                    "in Neuroscience and Philosophy. Although I have a strong interest in programming and solving problems "+
-                    "through computers, I am also fascinated by how the human mind works, both physiologically and on a more "+
-                    "abstract level. I have been programming for six years and would consider myself proficient in Java, "+
-                    "JavaScript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.<br><br>I have recently "+
-                    "concluded my internship at <a href=\"https://www.aires.com/\" target=\"_blank\">Aires</a> for the "+
-                    "summer, but I work on programming projects in my spare time as well. You can contact me using the "+
-                    "email bechek.jordan@gmail.com.</p>");
+                    "href=\"http://www.washjeff.edu\" target=\"_blank\">Washington &amp; Jefferson College</a>, with "+
+                    "minors in Neuroscience and Philosophy. Although I have a strong interest in programming and solving "+
+                    "problems through computers, I am also fascinated by how the human mind works, both physiologically "+
+                    "and on a more abstract level. I have been programming for six years and would consider myself "+
+                    "proficient in Java, JavaScript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.<br><br>"+
+                    "I am, always have been, and always will be a problem solver and tinkerer, inquisitive in nature"+
+                    " and imaginative at heart. You can contact me using the email bechek.jordan@gmail.com.");
 
                 $("#content").css("margin-top", $("#intro").height()*0.5).css("height", "auto");
                 $("#aboutSection p:eq(0)").css("margin-top", "7px");
@@ -497,6 +498,12 @@ $(".proj img").on("mouseleave", function() {
     }
 });
 
+$("#title").on("click", function() {
+    if(sectionOpened) {
+        $("div.sectionTitle:not(.unselected)").trigger("click");
+    }
+});
+
 $(window).on("resize", function() {
     let el = $("div.sectionTitle:not(.unselected)").attr("id");
 
@@ -545,12 +552,14 @@ $(window).on("resize", function() {
     lastWidth = window.innerWidth;
 });
 
+var moreItemOutSpeed = 150, moreItemInSpeed = 250;
+
 $("#moreDiv img").on("mouseover", function() {
-    $(this).fadeOut(150, function() {
+    $(this).fadeOut(moreItemOutSpeed, function() {
         let pic = $(this).attr("src");
         pic = pic.substring(0, pic.lastIndexOf("_"));
       
-        $(this).attr("src", pic + "_green.png").fadeIn(300);
+        $(this).attr("src", pic + "_green.png").fadeIn(moreItemInSpeed);
     });
 
     if($(this).parents("#interests").length > 0) {
@@ -560,7 +569,7 @@ $("#moreDiv img").on("mouseover", function() {
 
         let elIndex = $(this).index();
 
-        $("#moreDiv h3:eq(0)").fadeOut(150, function() {
+        $("#moreDiv h3:eq(0)").fadeOut(moreItemOutSpeed, function() {
             $(this).html(title).css("color", "rgba(26, 180, 35, 1)");
 
             if(window.innerWidth > minWidth) {
@@ -571,13 +580,13 @@ $("#moreDiv img").on("mouseover", function() {
                 }
             }
             
-            $(this).fadeIn(300);
+            $(this).fadeIn(moreItemInSpeed);
         });
-    } else if($(this).parents("#skills").length > 0) {
+    } else if($(this).parents("#languages").length > 0) {
         let title = $(this).attr("src");
         let elIndex = $(this).index();
 
-        $("#moreDiv h3:eq(1)").fadeOut(150, function() {
+        $("#moreDiv h3:eq(2)").fadeOut(moreItemOutSpeed, function() {
             if(window.innerWidth > minWidth) {
                 if(elIndex < 3) {
                     $(this).css("margin-left", (3-elIndex)*-220);
@@ -596,30 +605,54 @@ $("#moreDiv img").on("mouseover", function() {
                 $(this).html("Database");
             } else if(elIndex === 6) {
                 $(this).html("Data");
-            } else {
+            } else if(elIndex > 6 && elIndex < 9) {
                 $(this).html("Windows");
             }
 
-            $(this).css("color", "rgba(26, 180, 35, 1)").fadeIn(300);
+            $(this).css("color", "rgba(26, 180, 35, 1)").fadeIn(moreItemInSpeed);
+        });
+    } else if($(this).parents("#software").length > 0) {
+        let title = $(this).attr("src");
+        title = title.substring(title.indexOf("/") + 1, title.indexOf("_"));
+        title = title.replace(/-/g, " ");
+
+        let elIndex = $(this).index();
+
+        $("#moreDiv h3:eq(1)").fadeOut(moreItemOutSpeed, function() {
+            $(this).html(title).css("color", "rgba(26, 180, 35, 1)");
+
+            if(window.innerWidth > minWidth) {
+                if(elIndex < 3) {
+                    $(this).css("margin-left", (3-elIndex)*-220);
+                } else if(elIndex > 3) {
+                    $(this).css("margin-left", (elIndex-3)*220);
+                }
+            }
+            
+            $(this).fadeIn(moreItemInSpeed);
         });
     }
 });
 
 $("#moreDiv img").on("mouseleave", function() {
-    $(this).fadeOut(150, function() {
+    $(this).fadeOut(moreItemOutSpeed, function() {
         let pic = $(this).attr("src");
         pic = pic.substring(0, pic.lastIndexOf("_"));
       
-        $(this).attr("src", pic + "_white.png").fadeIn(300);
+        $(this).attr("src", pic + "_white.png").fadeIn(moreItemInSpeed);
     });
 
     if($(this).parents("#interests").length > 0) {
-        $("#moreDiv h3:eq(0)").fadeOut(150, function() {
-            $(this).html("Interests").css("color", "#e6e6e6").css("margin-left", "auto").fadeIn(300);
+        $("#moreDiv h3:eq(0)").fadeOut(moreItemOutSpeed, function() {
+            $(this).html("Interests").css("color", "#e6e6e6").css("margin-left", "auto").fadeIn(moreItemInSpeed);
         });
-    } else if($(this).parents("#skills").length > 0) {
-        $("#moreDiv h3:eq(1)").fadeOut(150, function() {
-            $(this).html("Skill Set").css("color", "#e6e6e6").css("margin-left", "auto").fadeIn(300);
+    } else if($(this).parents("#languages").length > 0) {
+        $("#moreDiv h3:eq(2)").fadeOut(moreItemOutSpeed, function() {
+            $(this).html("Languages").css("color", "#e6e6e6").css("margin-left", "auto").fadeIn(moreItemInSpeed);
+        });
+    } else if($(this).parents("#software").length > 0) {
+        $("#moreDiv h3:eq(1)").fadeOut(moreItemOutSpeed, function() {
+            $(this).html("Software Experience").css("color", "#e6e6e6").css("margin-left", "auto").fadeIn(moreItemInSpeed);
         });
     }
 });
