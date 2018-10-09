@@ -227,9 +227,9 @@ $(".sectionTitle").on("click", function() {
                         "JavaScript</p><p><span class=\"enterChar\">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML,"+
                         " JSON, and SQL.</p><p><span class=\"enterChar\">></span></p><p>"+
                         "<p><span class=\"enterChar\">></span> I am, always have been, and always will be a problem "+
-                        "solver and tinkerer,</p><p><span class=\"enterChar\">></span> inquisitive in nature and "+
-                        "imaginative at heart. You can contact me using the</p><p><span class=\"enterChar\">></span>"+
-                        " email bechek.jordan@gmail.com.</p>");
+                        "solver and tinkerer,</p><p><span class=\"enterChar\">></span> inquisitive in nature and imaginative "+
+                        "at heart. To view my resume or contact</p><p><span class=\"enterChar\">></span> me, click <a "+
+                        "href=\"resume_website.pdf\" target=\"_blank\">here</a>.</p>");
             }, 200);
 
         } else if(clickedEl === $(".sectionTitle:eq(3)").attr("id")) {
@@ -386,8 +386,8 @@ $(".sectionTitle").on("click", function() {
                     "problems through computers, I am also fascinated by how the human mind works, both physiologically "+
                     "and on a more abstract level. I have been programming for six years and would consider myself "+
                     "proficient in Java, JavaScript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.<br><br>"+
-                    "I am, always have been, and always will be a problem solver and tinkerer, inquisitive in nature"+
-                    " and imaginative at heart. You can contact me using the email bechek.jordan@gmail.com.");
+                    "I am, always have been, and always will be a problem solver and tinkerer, inquisitive in nature and imaginative "+
+                    "at heart. To view my resume or contact me, click <a href=\"resume_website.pdf\" target=\"_blank\">here</a>.</p>");
 
                 $("#content").css("margin-top", $("#intro").height()*0.5).css("height", "auto");
                 $("#aboutSection p:eq(0)").css("margin-top", "7px");
