@@ -223,7 +223,7 @@ $(".sectionTitle").on("click", function() {
                         "strong interest in programming and solving problems</p><p><span class=\"enterChar\">></span> "+
                         "through computers, I am also fascinated by how the human mind works, both</p><p><span class=\""+
                         "enterChar\">></span> physiologically and on a more abstract level. I have been programming</p><p>"+
-                        "<span class=\"enterChar\">></span> for six years and would consider myself proficient in Java, "+
+                        "<span class=\"enterChar\">></span> for eight years and would consider myself proficient in Java, "+
                         "JavaScript</p><p><span class=\"enterChar\">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML,"+
                         " JSON, and SQL.</p><p><span class=\"enterChar\">></span></p><p>"+
                         "<p><span class=\"enterChar\">></span> I am, always have been, and always will be a problem "+
@@ -384,7 +384,7 @@ $(".sectionTitle").on("click", function() {
                     "href=\"http://www.washjeff.edu\" target=\"_blank\">Washington &amp; Jefferson College</a>, with "+
                     "minors in Neuroscience and Philosophy. Although I have a strong interest in programming and solving "+
                     "problems through computers, I am also fascinated by how the human mind works, both physiologically "+
-                    "and on a more abstract level. I have been programming for six years and would consider myself "+
+                    "and on a more abstract level. I have been programming for eight years and would consider myself "+
                     "proficient in Java, JavaScript and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.<br><br>"+
                     "I am, always have been, and always will be a problem solver and tinkerer, inquisitive in nature and imaginative "+
                     "at heart. To view my resume or contact me, click <a href=\"resume_website.pdf\" target=\"_blank\">here</a>.</p>");
