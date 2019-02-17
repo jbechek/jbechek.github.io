@@ -395,6 +395,14 @@ a {
 	align-items: flex-start;
 }
 
+::selection {
+  background: rgba(26, 180, 35, 0.5); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: rgba(26, 180, 35, 0.5); /* Gecko Browsers */
+}
+
 @media only screen and (max-width: 785px) and (min-width: 10px) {
 	.iconSet img {
 		margin: auto;

@@ -552,7 +552,7 @@ $(window).on("resize", function() {
     lastWidth = window.innerWidth;
 });
 
-var moreItemOutSpeed = 150, moreItemInSpeed = 250;
+var moreItemOutSpeed = 75, moreItemInSpeed = 175;
 
 $("#moreDiv img").on("mouseover", function() {
     $(this).fadeOut(moreItemOutSpeed, function() {
