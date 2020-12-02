@@ -1,192 +1,183 @@
 <!--
 	* Personal website of Jordan Bechek
-	* file: index.html
+	* File: index.html
 -->
 
-<html>
+<html class="scrollbar-hidden">
 	<head>
-		<title>Jordan Bechek</title>
+		<title>Jordan Ellis Bechek</title>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link id="hide-scroll" rel="stylesheet" type="text/css" href="css/hide-scroll.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="icon" href="img/green_slashes.png">
-		<script src="js/jquery-1.11.3.min.js"></script>
 	</head>
 
 	<body>
-		<div id="wrapper">
-			<div id="intro">
-				<div class="typed">
-					<div id="title">Jordan Bechek</div>
+		<div id="container">
+			<div id="wrapper-intro" class="wrapper">
+				<div id="name">Jordan Ellis Bechek</div>
+				<div>
+					<span class="attribute fade-in">Developer.&nbsp;</span>
+					<span class="attribute fade-in">Philosopher.&nbsp;</span>
+					<span class="attribute fade-in">Leader.</span>
 				</div>
-
-				<div id="attributes">Programmer&nbsp;&nbsp;×&nbsp;&nbsp;Philosopher</div>
-			</div>
-			
-			<div id="applicationsTitleWrapper">
-				<div id="applicationsTitle" class="sectionTitle unselected">Applications(<div class="openInd">viewing</div>)</div>
 			</div>
 
-			<div id="projectsTitleWrapper">
-				<div id="projectsTitle" class="sectionTitle unselected">Projects(<div class="openInd">viewing</div>)</div>
-			</div>
-		
-			<div id="aboutTitleWrapper">
-				<div id="aboutTitle" class="sectionTitle unselected">About(<div class="openInd">viewing</div>)</div>
-			</div>
-			
-			<div id="moreTitleWrapper">
-				<div id="moreTitle" class="sectionTitle unselected">More(<div class="openInd">viewing</div>)</div>
-			</div>
+			<div id="wrapper-main" class="wrapper">
+				<div id="section-about" class="section fade-in">
+					<div class="section-title"><span>//&nbsp;</span>About</div>
 
-			<!--<div id="test">testing</div>-->
-
-			<div id="content">
-				<div id="appsDiv" align="center">
-					<!--  https://itunes.apple.com/us/app/students-edge/id1147786379?mt=8  -->
-					<div id="studentsEdge" class="appLeft app applicationsContent">
-						<div class="overlayWrapper">
-							<img src="img/students_edge_icon.png">
-							<div class="overlayTextWrapper overlayTop">
-								<div class="overlayText overlayiOS">iOS</div>
-							</div>
-							<div class="overlayTextWrapper overlayBottom">
-								<div class="overlayText overlayAndroid">Android</div>
-							</div>
-						</div>
-
-						<div class="appTitle">Student's Edge</div>
-					</div>
-
-					<!--  https://itunes.apple.com/us/app/my-sunny-day/id1335787451?mt=8  -->
-					<div id="mySunnyDay" class="app applicationsContent">
-						<div class="overlayWrapper">
-							<img src="img/my_sunny_day_icon.png">
-							<div class="overlayTextWrapper overlayCenter">
-								<div class="overlayText overlayiOS">iOS</div>
-							</div>
-						</div>
-
-						<div class="appTitle">My Sunny Day</div>
-					</div>
-				</div>
-
-				<div id="projDiv" align="center">
-					<div id="eyeTrackingProj" class="proj projLeft projContent">
-						<div class="folderWrapper">
-							<a href="https://imgur.com/a/VPk6nBb" target="_blank"><img src="img/folder.png"></a>
-						</div>
-
-						<div class="projTitle"><a href="https://imgur.com/a/VPk6nBb" target="_blank">Eye Tracking Chess Players</a></div>
-					</div>
-
-					<div id="realtimeTracker" class="proj projContent">
-						<div class="folderWrapper">
-							<a href="https://github.com/FT-Testing/FT-Testing.github.io" target="_blank"><img src="img/folder.png"></a>
-						</div>
-
-						<div class="projTitle"><a href="https://github.com/FT-Testing/FT-Testing.github.io" target="_blank">Real-Time Bus Tracker</a></div>
-					</div>
-
-					<div id="databaseProj" class="proj projContent">
-						<div class="folderWrapper">
-							<a href="https://github.com/jbechek/CIS-351_Final_Project" target="_blank"><img src="img/folder.png"></a>
-						</div>
-
-						<div class="projTitle"><a href="https://github.com/jbechek/CIS-351_Final_Project" target="_blank">Data Storage Solution</a></div>
-					</div>
-				</div>
-
-				<div id="aboutSection">
-					<div class="aboutContent">
-						<p><span class="enterChar">></span> I have a Bachelor's Degree in Computing and Information Studies from</p>
-						<p><span class="enterChar">></span> <a href="http://www.washjeff.edu" target="_blank">Washington &amp; Jefferson 
-						College</a>, with minors in Neuroscience and Philosophy.</p>
-						<p><span class="enterChar">></span> Although I have a strong interest in programming and solving problems</p>
-						<p><span class="enterChar">></span> through computers, I am also fascinated by how the human mind works, both</p>
-						<p><span class="enterChar">></span> physiologically and on a more abstract level. I have been programming</p>
-						<p><span class="enterChar">></span> for eight years and would consider myself proficient in Java, JavaScript</p>
-						<p><span class="enterChar">></span> and JQuery/Jquery Mobile, HTML5 and CSS3, XML, JSON, and SQL.</p>
-						<p><span class="enterChar">></span></p>
-						<p><span class="enterChar">></span> I am, always have been, and always will be a problem solver and tinkerer,</p>
-						<p><span class="enterChar">></span> inquisitive in nature and imaginative at heart. To view my resume or contact</p>
-						<p><span class="enterChar">></span> me, click <a href="resume_website.pdf" target="_blank">here</a>.</p>
-					
-					</div>
-				</div>
-
-				<div id="moreDiv" align="center">
-					<h3>Interests</h3>
-
-					<div id="interests" class="iconSet">
-						<!-- original headphone icon by Souvik Bhattacharjee -->
-						<!-- https://www.shareicon.net/head-phone-line-icon-headphone-headphone-icon-110913 -->
-						<img src="img/Music_icon_white.png" class="largeImg">
-
-						<!-- original minecraft pickaxe icon by Ben Davis -->
-						<!-- https://thenounproject.com/search/?q=minecraft%20pickaxe&i=447298 -->
-						<img src="img/Modding_pickaxe_white.png" class="smallImg">
-
-						<!-- original halo legendary icon by Zanramon -->
-						<!-- https://crussong.deviantart.com/art/Halo-Legendary-logo-Black-182842251 -->
-						<img src="img/Gaming_icon_white.png">
-
-						<!-- original brain icon by Clockwise -->
-						<!-- https://thenounproject.com/search/?q=synapse&i=1111386 -->
-						<img src="img/Neuroscience_icon_white.png" class="largeImg">
-
-						<!-- original thinking icon by Symbolon -->
-						<!-- https://thenounproject.com/symbolon/collection/mindset/?i=921317 -->
-						<img src="img/Philosophy_icon_white.png" class="largeImg">
-
-						<!-- original learning icon -->
-						<!-- https://icons8.com/icon/58586/machine-learning 
-						<img src="img/Learning_icon_white.png">-->
-						<img src="img/Puzzles_icon_white.png" class="largeImg">
-
-						<!-- original tennis racquet icon by Vectors Market -->
-						<!-- https://thenounproject.com/search/?q=tennis&i=271119 -->
-						<img src="img/Tennis_icon_white.png">
-					</div>
-
-					<h3 style="padding-top: 30px">Software Experience</h3>
-
-					<div id="software" class="iconSet">
-						<img src="img/NetBeans_icon_white.png">
-						<img src="img/Eclipse_icon_white.png" class="smallImg">
-
-						<!-- original amazon alexa icon by Sarah Stenseng -->
-						<!-- https://thenounproject.com/term/amazon-echo/1048949/ -->
-						<img src="img/Amazon-Alexa_icon_white.png" class="smallImg">
+					<p>
+						I have a Bachelor's Degree in Computing and Information Studies from 
+						<a href="https://www.washjeff.edu/" target="_blank">Washington & Jefferson College</a>, 
+						with minors in Neuroscience and Philosophy. 
+						Although I have a strong interest in programming and solving problems 
+						through computers, I am also fascinated by how the human mind works, both 
+						physiologically and on a more abstract level. I have been programming 
+						for <span id="experience"></span> years and would consider myself proficient in Java, JavaScript 
+						and JQuery/Jquery Mobile, HTML5 and CSS3, ColdFusion, XML, JSON, Batch, 
+						and SQL (Oracle and MySQL).<br><br>
 						
-						<img src="img/Android-Studio_icon_white.png">
-						<img src="img/MySQL_icon_white.png" class="xSmallImg">
-						<img src="img/Cordova_icon_white.png" class="xSmallImg">
-						<img src="img/Xcode_icon_white.png" class="smallImg">
+						I currently work as an Oracle Database & GUI Developer for 
+						<a href="https://www.northropgrumman.com" target="_blank">Northrop Grumman</a>. 
+						My chief responsibilities include Oracle SQL database development, design, 
+						and maintenance, in addition to web interface development using Adobe ColdFusion. 
+						My workload encompasses various aspects of the development stack, keeping my 
+						skill set sharp and flexible.<br><br>
+						
+						I am, always have been, and always will be a problem solver and tinkerer, 
+						inquisitive in nature and imaginative at heart. To contact me or discover more, visit 
+						my <a href="resume_website.pdf" target="_blank">curriculum vitae</a>.
+					</p>
+				</div>
+
+				<div id="section-projects" class="section fade-in">
+					<div class="section-title"><span>//&nbsp;</span>Independent Projects</div>
+					
+					<div class="project">
+						<div id="ft-video-container" class="project-video">
+							<video id="ft-video" autoplay muted loop playsinline width="229" height="224">
+	   							<source src="video/ft.mp4" type="video/mp4">
+							</video>
+						</div>
+
+						<div class="project-text">
+							<div class="project-title">Real-Time Bus Tracker</div>
+
+							<p>
+								For my CIS capstone project, I led the development of a real-time 
+								bus-tracking <a href="https://ft-testing.github.io/" target="_blank">
+								web service</a> for Freedom Transit. Android tablets housed on the busses run a custom tracking 
+								app, sending geolocation data to a Google Firebase database. The 
+								client-facing web application reads from the database and paints 
+								an interactive map using the Google Maps API.
+							</p>
+						</div>
 					</div>
 
-					<h3 style="padding-top: 30px">Languages</h3>
+					<div class="project">
+						<div id="chess-video-container" class="project-video">
+							<video id="chess-video" autoplay muted loop playsinline width="229" height="265">
+	   							<source src="video/chess.mp4" type="video/mp4">
+							</video>
+						</div>
 
-					<div id="languages" class="iconSet" style="padding-bottom: 30px">
-						<img src="img/java_icon_white.png">
-						<img src="img/html_icon_white.png">
-						<img src="img/css_icon_white.png">
-						<img src="img/js_icon_white.png">
-						<img src="img/sql_icon_white.png">
-						<img src="img/xml_icon_white.png">
-						<img src="img/json_icon_white.png">
-						<img src="img/inc_icon_white.png">
-						<img src="img/ini_icon_white.png">
+						<div class="project-text">
+							<div class="project-title">Eye Tracking Chess Players</div>
+
+							<p>
+								My <a href="https://imgur.com/a/VPk6nBb" target="_blank">
+								final project</a> for Eye Tracking Methodology involved designing and 
+								carrying out an experiment to compare the eye-movement patterns of 
+								novice and expert chess players. With the help of a Tobii X60 eye 
+								tracker, we found that, in general, expert players spend more time 
+								attenuating to spatial relationships between pieces, whereas novice 
+								players spend more time looking at the pieces themselves.
+							</p>
+						</div>
+					</div>
+
+					<div class="project">
+						<div id="mc-video-container" class="project-video">
+							<a href="https://www.reddit.com/r/Minecraft/comments/9xyhnv/first_plugin_completely_sync_philips_hue_smart/" target="_blank">
+								<video id="mc-video" autoplay muted loop playsinline width="320" height="180">
+	   								<!--<source src="https://v.redd.it/dn8uzxstkxy11/DASH_9_6_M?source=fallback" type="video/mp4">-->
+	   								<source src="video/mc_hue.mp4" type="video/mp4">
+								</video>
+							</a>
+						</div>
+
+						<div class="project-text">
+							<div class="project-title">Minecraft-Hue Mod/Plugin</div>
+
+							<p>
+								In my spare time at home, I developed a <a href="https://github.com/DerangedMango/Minecraft-Hue-Mod"
+								target="_blank">Minecraft mod</a> that communicates 
+								environmental block data in real-time to the user's Philips Hue smart lights. 
+								This allows the on-screen experience to be synced with the glow emitted 
+								by the lights, and generates visual responses from in-game triggers, such as lightning 
+								strikes or walking near a roaring campfire.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="section-apps" class="section fade-in">
+					<div class="section-title"><span>//&nbsp;</span>Apps</div>
+
+					<div class="app">
+						<div class="app-img">
+							<img src="img/students_edge_icon.png" width="175" height="175">
+						</div>
+
+						<div class="app-text">
+							<div class="app-title">Student's Edge</div>
+
+							<p>
+								Keep track of all your grades in one place and determine the 
+								minimum required grade for any given assignment. 
+								Set your own goals and keep track of your GPA and progress. 
+								Even adjust the grading scale for each class to get the most accurate 
+								representation of your accomplishments.
+							</p>
+
+							<div class="app-links">
+								<span><a class="disabled">iOS</a>&nbsp;//&nbsp;<a href="https://play.google.com/store/apps/details?id=io.cordova.studentsedge" target="_blank">Android</a></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="app">
+						<div class="app-img">
+							<img src="img/my_sunny_day_icon.png" width="175" height="175">
+						</div>
+
+						<div class="app-text">
+							<div class="app-title">My Sunny Day</div>
+
+							<p>
+								The My Sunny Day app was created for all those times when the 
+								sun doesn't shine, and you really wish it would. Whether this 
+								is due to foul weather, season, or locale, the My Sunny Day app 
+								is sunshine at your fingertips!
+							</p>
+
+							<div class="app-links">
+								<span><a class="disabled">iOS</a></span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div id="legal">
-				<div id="copyright">/* © 2019 Jordan Bechek, All Rights Reserved */</div>
+			<div id="footer">
+				<div id="copyright" class="fade-in">/* © <span id="current_year"></span> Jordan Bechek, All Rights Reserved */</div>
 			</div>
 		</div>
 
-		<script src="js/main.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

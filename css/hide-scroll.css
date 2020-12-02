@@ -1,0 +1,6 @@
+/*
+	* Personal website of Jordan Bechek
+	* File: hide-scroll.css
+*/
+
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0) !important; }
