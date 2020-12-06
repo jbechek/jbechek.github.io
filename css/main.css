@@ -6,6 +6,9 @@
 :root {
 	--main-text-color: #E6E6E6;
 	--accent-color: #1AB423;
+
+	  scrollbar-color: rgba(26, 180, 35, 0.7) #152839;
+	  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
@@ -40,7 +43,7 @@
 
 div.typed {
 	overflow: hidden;
-	/*border-right: .1em solid rgba(26, 180, 35, 0.3);*/
+	border-right: .1em solid rgba(26, 180, 35, 0.3);
 	white-space: nowrap;
 	letter-spacing: .15em;
 	animation: 

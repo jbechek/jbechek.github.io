@@ -4,3 +4,4 @@
 */
 
 ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0) !important; }
+:root { scrollbar-color: rgba(0,0,0,0) rgba(0,0,0,0) !important; }

@@ -7,7 +7,7 @@ var isScrolling;
 var animationEvent = whichAnimationEvent();
 var windowWidthCheck = 550;
 
-window.addEventListener("scroll", function ( event ) {
+window.addEventListener("scroll", function () {
 	window.clearTimeout(isScrolling);
 
 	if($("#hide-scroll").attr("href") != "") $("#hide-scroll").attr("href", "");
@@ -19,15 +19,15 @@ window.addEventListener("scroll", function ( event ) {
 
 $(document).ready(function() {
 	keywordFill();
-	adaptToScreen();
+	adaptToScreen(true);
 
 	setTimeout(function() {
-		fadeElementsIn(".attribute.fade-in", 350, 500);
+		fadeElementsIn(".attribute.fade-in", 400, 500);
 	}, 250);
 
 	setTimeout(function() {
-		fadeElementsIn(".section.fade-in", 500, 500);
-	}, 1000);
+		fadeElementsIn(".section.fade-in", 250, 500);
+	}, 1500);
 
 	setTimeout(function() {
 		fadeElementIn("#copyright", 500, 500);
@@ -37,15 +37,11 @@ $(document).ready(function() {
 		$("div#name").addClass("typed");
 	}
 
-	setTimeout(function() {
-	    $("div.typed").css("border-right", ".1em solid rgba(26, 180, 35, 0.3)");
-	}, 10);
-
 	$("div.typed").one(animationEvent, function() {
 	    $(this).css("border-right", ".1em solid #1AB423").css("animation", "blink-caret .85s step-end infinite");
 	});
 
-	$(window).on("DOMContentLoaded load resize scroll", function() {
+	$(window).on("resize", function() {
 		adaptToScreen();
 	});
 });
@@ -57,13 +53,13 @@ function keywordFill() {
 	$("#current_year").text(date.getFullYear());
 }
 
-function adaptToScreen() {
+function adaptToScreen(ignoreCursor) {
 	if($(window).width() < windowWidthCheck) {
 		$("div#name").text("Jordan Bechek");
-		$("div.typed").css("border-right", "none");
+		if(!ignoreCursor) $("div.typed").css("border-right", "none");
 	} else {
 		$("div#name").text("Jordan Ellis Bechek");
-		$("div.typed").css("border-right", ".1em solid #1AB423");
+		if(!ignoreCursor) $("div.typed").css("border-right", ".1em solid #1AB423");
 	}
 }
 
